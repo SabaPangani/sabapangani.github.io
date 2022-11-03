@@ -1,0 +1,620 @@
+@font-face {
+  font-family: barlow;
+  src: url(/fonts/Barlow-Regular.otf);
+}
+@font-face {
+  font-family: frances;
+  src: url(/fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+* {
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --Softred: hsl(7, 99%, 70%);
+  --Yellow: hsl(51, 100%, 49%);
+  --Darkdesaturatedcyan: #25564b;
+  --Darkblue: hsl(198, 62%, 26%);
+  --Darkmoderatecyan: #458c7e;
+  --Verydarkdesaturatedblue: hsl(212, 27%, 19%);
+  --Verydarkgrayishblue: hsl(213, 9%, 39%);
+  --Darkgrayishblue: hsl(232, 10%, 55%);
+  --Grayishblue: hsl(210, 4%, 67%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+body .header {
+  overflow-x: hidden;
+  position: relative;
+  max-width: 100%;
+  width: 100vw;
+  height: 75vh;
+  background-position-y: 100%;
+  background: url(/sunnyside-agency-landing-page-main/images/desktop/image-header.jpg) #3DBEFF;
+  background-repeat: no-repeat;
+  background-size: auto 60rem;
+  background-position-x: center;
+  background-position-y: bottom;
+  padding: 3rem 3rem;
+  box-sizing: border-box;
+  font-family: barlow, sans-serif;
+}
+body .header .active {
+  right: 0;
+  transition: 0.3s;
+}
+body .header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+body .header nav .logo {
+  width: 180px;
+}
+body .header nav .menuBtn {
+  width: 35px;
+  height: 5px;
+  border-radius: 40px;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+body .header nav .menuBtn::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 0;
+  width: 29px;
+  height: 5px;
+  border-radius: 40px;
+  background-color: white;
+}
+body .header nav .menuBtn::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  width: 18px;
+  height: 5px;
+  border-radius: 40px;
+  background-color: white;
+}
+body .header nav .navbar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  column-gap: 120px;
+}
+body .header nav .navbar a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+  position: relative;
+}
+body .header nav .navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  height: 2.5px;
+  width: 100%;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: 0.3s ease-in-out;
+}
+body .header nav .navbar a:hover:after {
+  transform: scaleX(1);
+}
+body .header nav .navbar .contact {
+  font-family: frances;
+  color: var(--Verydarkdesaturatedblue);
+  background-color: white;
+  opacity: 0.9;
+  border-radius: 25px;
+  padding: 1rem 1.6rem;
+  transition: 0.2s;
+}
+body .header nav .navbar .contact:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.293);
+  background-color: var(--);
+}
+body .header nav .navbar .contact:hover::after {
+  transform: scale(0);
+}
+body .header .textBox {
+  font-family: frances;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -25%);
+  color: white;
+  font-size: 1.7rem;
+  letter-spacing: 7px;
+  text-align: center;
+}
+body .header .textBox .arrow {
+  position: absolute;
+  top: 120%;
+  left: 48.1%;
+  transform: translate(-50%, 120%);
+  animation: UpAndDown 1.3s infinite alternate;
+}
+body .overView .sectionOne {
+  transform: scale(0);
+  display: flex;
+  transition: 1s;
+}
+body .overView .sectionOne .content {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: center;
+}
+body .overView .sectionOne .content .textBox {
+  width: 65%;
+  font-family: frances;
+}
+body .overView .sectionOne .content .textBox h1 {
+  color: var(--Verydarkdesaturatedblue);
+  font-size: 6rem;
+  font-weight: bolder;
+}
+body .overView .sectionOne .content .textBox .sec {
+  font-size: 2rem;
+  color: var(--Grayishblue);
+}
+body .overView .sectionOne .content .textBox span {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--Verydarkdesaturatedblue);
+  margin-top: 40px;
+  position: relative;
+  cursor: pointer;
+}
+body .overView .sectionOne .content .textBox span::after {
+  content: "";
+  position: absolute;
+  height: 1vw;
+  left: -10px;
+  right: -10px;
+  top: 60%;
+  background-color: var(--Yellow);
+  border-radius: 100px;
+  opacity: 0.3;
+  z-index: -1;
+  transition: 0.2s;
+}
+body .overView .sectionOne .content .textBox span:hover:after {
+  opacity: 1;
+}
+body .overView .sectionOne .imgDiv {
+  flex-basis: 50%;
+}
+body .overView .sectionOne .imgDiv .egg {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+body .overView .sectionTwo {
+  transform: scale(0);
+  display: flex;
+  transition: 1s;
+}
+body .overView .sectionTwo .content {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: center;
+}
+body .overView .sectionTwo .content .textBox {
+  width: 65%;
+  font-family: frances;
+}
+body .overView .sectionTwo .content .textBox h1 {
+  color: var(--Verydarkdesaturatedblue);
+  font-size: 6rem;
+  font-weight: bolder;
+}
+body .overView .sectionTwo .content .textBox .sec {
+  font-size: 2rem;
+  color: var(--Grayishblue);
+}
+body .overView .sectionTwo .content .textBox span {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--Verydarkdesaturatedblue);
+  margin-top: 40px;
+  position: relative;
+  cursor: pointer;
+}
+body .overView .sectionTwo .content .textBox span::after {
+  content: "";
+  position: absolute;
+  height: 1vw;
+  left: -10px;
+  right: -10px;
+  top: 60%;
+  background-color: var(--Softred);
+  border-radius: 100px;
+  opacity: 0.3;
+  z-index: -1;
+  transition: 0.2s;
+}
+body .overView .sectionTwo .content .textBox span:hover:after {
+  opacity: 1;
+}
+body .overView .sectionTwo .imgDiv {
+  flex-basis: 50%;
+}
+body .overView .sectionTwo .imgDiv .cup {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+body .overView .sectionThree {
+  max-width: 100%;
+  transform: scale(0);
+  transition: 1s;
+  display: flex;
+}
+body .overView .sectionThree .cherry {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+body .overView .sectionThree .cherry .textBox {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translate(-50%);
+  font-family: frances, sans-serif;
+}
+body .overView .sectionThree .cherry .textBox h1 {
+  text-align: center;
+  font-size: 5rem;
+  color: var(--Darkblue) !important;
+}
+body .overView .sectionThree .cherry .textBox .sec {
+  font-weight: bold;
+  font-size: 1.7rem;
+  text-align: center;
+  color: var(--Darkblue) !important;
+}
+body .overView .sectionThree .orange {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+body .overView .sectionThree .orange .textBox {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translate(-50%);
+  font-family: frances, sans-serif;
+}
+body .overView .sectionThree .orange .textBox h1 {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold;
+  color: var(--Darkblue) !important;
+}
+body .overView .sectionThree .orange .textBox .sec {
+  font-weight: bold;
+  font-size: 1.7rem;
+  text-align: center;
+  color: var(--Darkblue) !important;
+}
+body .testimonials {
+  transform: scale(0);
+  transition: 1s;
+  margin-top: 300px;
+  box-sizing: border-box;
+  font-family: frances;
+  display: flex;
+  justify-content: center;
+}
+body .testimonials .container {
+  width: 80%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 200px;
+}
+body .testimonials .container .title {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: -35%;
+  color: var(--Grayishblue);
+  transform: translateX(-50%);
+  font-size: 1.8rem;
+  letter-spacing: 5px;
+}
+body .testimonials .container .profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  row-gap: 70px;
+}
+body .testimonials .container .profile .profileImg {
+  width: 200px;
+  border-radius: 100%;
+}
+body .testimonials .container .profile .phrase {
+  color: var(--Verydarkgrayishblue);
+  font-weight: bold;
+  font-size: 1.9rem;
+  line-height: 45px;
+}
+body .testimonials .container .profile .info .name {
+  font-size: 1.7rem;
+  font-weight: bolder;
+  color: var(--Verydarkdesaturatedblue);
+}
+body .testimonials .container .profile .info .proffession {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--Grayishblue);
+}
+body .showCase {
+  width: 100vw;
+  transform: scale(0);
+  transition: 1s;
+  margin-top: 130px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+body .showCase img {
+  width: 25%;
+}
+body footer {
+  transform: scale(0);
+  transition: 1s;
+  height: 35vh;
+  color: #458c7e;
+  background-color: #9CDCCE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: barlow, sans-serif;
+}
+body footer .textBox {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+body footer .textBox .logo {
+  transform: scale(1.8);
+  color: #458c7e;
+}
+body footer .textBox .footNav {
+  display: flex;
+  flex-direction: row;
+  column-gap: 100px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+body footer .textBox .footNav li:hover {
+  color: white;
+  transition: 0.3s;
+}
+body footer .textBox .socials img {
+  margin-right: 20px;
+  width: 27px;
+  cursor: pointer;
+}
+
+@keyframes UpAndDown {
+  from {
+    transform: translateY(30%);
+  }
+  to {
+    transform: translateY(50%);
+  }
+}
+@media only screen and (max-width: 2030px) {
+  .overView .textBox h1 {
+    font-size: 4rem !important;
+  }
+  .overView .textBox .sec {
+    font-size: 1.5rem !important;
+  }
+  .overView .textBox span {
+    font-size: 1.7rem !important;
+  }
+}
+@media only screen and (max-width: 2054px) {
+  .testimonials .phrase {
+    font-size: 1.5rem !important;
+  }
+  .testimonials .info .name {
+    font-size: 1.3rem !important;
+  }
+  .testimonials .info .proffession {
+    font-size: 0.9rem !important;
+  }
+}
+@media only screen and (max-width: 1688px) {
+  .overView .sectionThree .textBox h1 {
+    font-size: 3rem !important;
+  }
+  .overView .sectionThree .textBox .sec {
+    font-size: 1.2rem !important;
+  }
+}
+@media only screen and (max-width: 1610px) {
+  .testimonials .phrase {
+    font-size: 1.2rem !important;
+    line-height: 30px !important;
+  }
+}
+@media only screen and (max-width: 1557px) {
+  .testimonials .title {
+    font-size: 1rem !important;
+  }
+}
+@media only screen and (max-width: 1354px) {
+  .overView .textBox h1 {
+    font-size: 3rem !important;
+  }
+  .overView .textBox .sec {
+    font-size: 1.2rem !important;
+  }
+  .overView .textBox span {
+    font-size: 1.2rem !important;
+  }
+}
+@media only screen and (max-width: 1312px) {
+  .overView .sectionThree .textBox h1 {
+    font-size: 2rem !important;
+  }
+  .overView .sectionThree .textBox .sec {
+    font-size: 0.8rem !important;
+  }
+}
+@media only screen and (max-width: 1157px) {
+  .header .navbar {
+    column-gap: 60px !important;
+  }
+}
+@media only screen and (max-width: 1061px) {
+  .overView .textBox {
+    margin-bottom: 50px;
+  }
+  .overView .section {
+    flex-direction: column;
+  }
+  .overView .sectionOne {
+    flex-direction: column-reverse;
+  }
+  .overView .sectionThree .cherry h1 {
+    font-size: 2.3rem !important;
+  }
+  .overView .sectionThree .cherry .sec {
+    font-size: 1.2rem !important;
+  }
+  .overView .sectionThree .orange h1 {
+    font-size: 2.3rem !important;
+  }
+  .overView .sectionThree .orange .sec {
+    font-size: 1.2rem !important;
+  }
+  .testimonials .profile {
+    row-gap: 0px !important;
+  }
+  .testimonials .title {
+    top: -15% !important;
+    font-size: 0.8rem !important;
+  }
+  .testimonials .container {
+    flex-direction: column;
+  }
+  .testimonials .info {
+    margin-bottom: 30px;
+  }
+  footer .textBox {
+    row-gap: 10px !important;
+  }
+  footer .textBox .footNav {
+    padding: 0;
+    row-gap: 10px;
+    flex-direction: column !important;
+  }
+}
+@media only screen and (max-width: 879px) {
+  .header .navbar {
+    column-gap: 30px !important;
+  }
+}
+@media only screen and (max-width: 793px) {
+  .header .navbar {
+    position: absolute;
+    right: -500px;
+    top: 140px;
+    transition: 0.3s;
+    background-color: white;
+    padding: 50px 100px;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: flex-end;
+    margin: auto;
+    border-radius: 15px;
+  }
+  .header .navbar a {
+    color: black !important;
+  }
+  .header .navbar .contact {
+    background-color: var(--Yellow) !important;
+  }
+  .header .menuBtn {
+    display: block !important;
+  }
+  .overView span::after {
+    content: "";
+    top: 70% !important;
+  }
+}
+@media only screen and (max-width: 731px) {
+  .showCase img {
+    width: 50% !important;
+  }
+  .overView .sectionThree .cherry .textBox {
+    position: relative;
+    top: 30px;
+  }
+  .overView .sectionThree .cherry .textBox h1 {
+    font-size: 1.8rem !important;
+  }
+  .overView .sectionThree .cherry .textBox .sec {
+    font-size: 0.8rem !important;
+  }
+  .overView .sectionThree .orange .textBox {
+    position: relative;
+    top: 70px !important;
+  }
+  .overView .sectionThree .orange .textBox h1 {
+    font-size: 1.8rem !important;
+  }
+  .overView .sectionThree .orange .textBox .sec {
+    font-size: 0.8rem !important;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .overView span::after {
+    content: "";
+    top: 80% !important;
+  }
+}
+@media only screen and (max-width: 365px) {
+  .navbar .contact {
+    padding: 0.8rem 1.2rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
