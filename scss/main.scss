@@ -272,7 +272,6 @@ body{
         position: relative;
         .textBox{
             position: absolute;
-            bottom: 3%;
             left: 50%;
             transform: translate(-50%,);
             font-family: frances,sans-serif;
@@ -297,9 +296,13 @@ body{
         justify-content: center;
         width:100%;
         position: relative;
+
+        img{
+            width: 100%;
+            max-width: 100%;
+        }
         .textBox{
             position: absolute;
-            bottom: 3%;
             left: 50%;
             transform: translate(-50%);
             font-family: frances,sans-serif;
@@ -390,6 +393,7 @@ body{
         flex-wrap: wrap;
         img{
             width: 25%;
+            max-width: 100%;
         }
     }
 
@@ -665,70 +669,99 @@ body{
             width: 50% !important;
         }
     }
-    .overView{
-        .sectionThree{
-            .cherry{
-              .textBox{
-                position: relative;
-                top: 30px;
-                h1{
-                    font-size: 1.8rem !important;
-                }
-                .sec{
-                    font-size: 1rem !important;
-                }
-              }
-            }
-            .orange{
-                .textBox{
-                  position: relative;
-                  top: 70px !important;
-                  h1{
-                      font-size: 1.8rem !important;
-                  }
-                  .sec{
-                      font-size: .8rem !important;
-                  }
-                }
-              }
-        }
-       }
-    }
+}
+//     .overView{
+//         .sectionThree{
+//             .cherry{
+//               .textBox{
+//                 position: relative;
+//                 top: 30px;
+//                 h1{
+//                     font-size: 1.8rem !important;
+//                 }
+//                 .sec{
+//                     font-size: 1rem !important;
+//                 }
+//               }
+//             }
+//             .orange{
+//                 .textBox{
+//                   position: relative;
+//                   top: 70px !important;
+//                   h1{
+//                       font-size: 1.8rem !important;
+//                   }
+//                   .sec{
+//                       font-size: .8rem !important;
+//                   }
+//                 }
+//               }
+//         }
+//        }
+//     }
    
-    @media only screen and (max-width: 425px) {
-        .overView{
-            .sectionThree{
-                .cherry{
-                  .textBox{
-                    position: relative;
-                    bottom:20px !important;
-                  }
+//     @media only screen and (max-width: 425px) {
+//         .overView{
+//             .sectionThree{
+//                 .cherry{
+//                   .textBox{
+//                     position: relative;
+//                     bottom:20px !important;
+//                   }
+//                 }
+//                 .orange{
+//                     .textBox{
+//                       position: relative;
+//                       bottom:20px !important;
+//                     }
+//                   }
+//             }
+//            }
+//     }
+
+//     @media only screen and (max-width: 320px) {
+//         .overView{
+//             span::after{
+//                 content: '';        
+//                 top: 80% !important;
+//                 }
+//         }
+//     }
+
+@media only screen and (max-width: 365px) {
+    .navbar{
+      .contact{
+       padding: .8rem 1.2rem !important;
+       font-size: 1rem !important;
+      }
+   }
+  }
+
+    @media only screen and (max-width: 460px) {
+     .overView{
+        .sectionThree{
+            .orange{
+                img{
+                    height: 20rem;
                 }
-                .orange{
-                    .textBox{
-                      position: relative;
-                      bottom:20px !important;
+                .textBox{
+                    .sec{ 
+                        font-size: 1.2rem !important;
                     }
-                  }
-            }
-           }
-    }
-
-    @media only screen and (max-width: 320px) {
-        .overView{
-            span::after{
-                content: '';        
-                top: 80% !important;
                 }
-        }
-    }
-
-    @media only screen and (max-width: 365px) {
-      .navbar{
-        .contact{
-         padding: .8rem 1.2rem !important;
-         font-size: 1rem !important;
-        }
+            }
+            .cherry{
+                img{
+                    height: 20rem;
+                }
+                .textBox{
+                    .sec{ 
+                        font-size: 1rem !important;
+                        width: 100% !important;
+                    }
+                }
+            }
+          }
      }
     }
   
