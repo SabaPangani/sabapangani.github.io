@@ -5,12 +5,8 @@
 
 <div align="center">
   <h3>
-    <a href="https://catherineisonline.github.io/sunnyside-agency-landing-page-frontendmentor/" color="white">
+    <a href="https://sabapangani.github.io/" color="white">
       Live
-    </a>
-    <span> | </span>
-    <a href="https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-QfXrSGu5A">
-      Solution
     </a>
    <span> | </span>
     <a href="https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef">
